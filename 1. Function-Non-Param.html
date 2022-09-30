@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<script type="text/javascript">
+			function add()
+			{
+				var num1,num2,res;
+				num1=parseInt(document.frm_add.txt_num1.value);
+				num2=parseInt(document.frm_add.txt_num2.value);
+				res=num1+num2;
+				document.getElementById("res").innerHTML="Addition = "+res;
+			}
+		</script>
+	</head>
+	<body>
+		<form name="frm_add">
+			Enter 1st Number : <input type="text" name="txt_num1"><br>
+			Enter 2nd Number : <input type="text" name="txt_num2"><br>
+			<input type="button" value="Add" onclick="add()">
+			<p id="res"></p>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,94 @@
+<html>
+	<head>
+		<script>  
+			function validateform()
+			{  
+				var name=document.myform.name.value;  
+				var password=document.myform.password.value;  
+				var address=document.myform.address.value;
+				var city=document.myform.city.value;
+				var gender=document.getElementsByName('gender');    
+				var genValue = false;
+				for(var i=0; i<gender.length;i++)
+				{
+					if(gender[i].checked == true)
+					{
+						genValue = true;    
+					}
+				}
+				var count=0;
+				var subject = document.myform.subject;
+				for (var i=0; i<subject.length; i++) 
+				{
+					if (subject[i].checked==true)
+					{
+						count=count+1;
+						break;
+					}
+				}
+				
+				if (name==null || name=="")
+				{  
+		 	 		alert("Name can't be blank");  
+		  			return false;  
+				}
+				else if(password.length<6 || password.length>10)
+				{  
+		  			alert("Password must be between 6 and 10 characters long."); 
+					document.myform.password.value=""; 
+		  			return false;  
+		  		} 
+				else if (address==null || address=="")
+				{  
+		 	 		alert("Address can't be blank");  
+		  			return false;  
+				}
+				else if (city==null || city=="")
+				{  
+		 	 		alert("Please select atleast one city");  
+		  			return false;  
+				} 
+				else if(!genValue)
+				{
+					alert("Please Choose the gender");
+					return false;
+				}
+				else if(count==0)
+				{
+					alert("pls select atleast one subject");
+					return false;
+				}
+				else
+				{
+					alert("Form Data Submitted");
+					return true;  
+				}
+			}  
+		</script>  
+	</head>
+	<body>
+		<form name="myform" method="post" onsubmit="return validateform()">
+			Name: <input type="text" name="name"><br/> 
+			Password: <input type="password" name="password"><br/> 
+			Address: <textarea rows="4" cols="20" name="address"></textarea><br/>
+			<label>City</label>
+			<select name="city">
+				<option value="">Select City</option>
+				<option value="Mumbai">Mumbai</option>
+				<option value="Pune">Pune</option>
+				<option value="Delhi">Delhi</option>
+				<option value="Goa">Goa</option>
+			</select><br/><br/> 
+			<label>Gender</label>
+			<input type="radio" value="Male" name="gender">Male 
+			<input type="radio" value="Female" name="gender">Female<br/><br/>
+			<label>Subject</label>
+			<input type="checkbox" value="Biology" name="subject">Biology 
+			<input type="checkbox" value="Chemistry" name="subject">Chemistry 
+			<input type="checkbox" value="Physics" name="subject">Physics 
+			<input type="checkbox" value="BK" name="subject">BK 
+			<input type="checkbox" value="OC" name="subject">OC<br/><br/>
+			<input type="submit" value="register">
+		</form> 
+	</body>
+</html>

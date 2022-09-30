@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<script>
+			function dialog_box()
+			{
+				var name;
+				var r=confirm("Press a button!");
+				name=prompt("Enter your name");
+				if(r==true) 
+				{
+					alert(name+" You pressed OK!");
+				} 
+				else 
+				{
+					alert(name+" You pressed Cancel!");
+				}
+			}
+		</script> 
+	</head>
+	<body>
+		<input type="button" value="Dialog Box" onclick="dialog_box()">
+	</body>
+</html>

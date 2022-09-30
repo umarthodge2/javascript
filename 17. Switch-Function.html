@@ -1,0 +1,35 @@
+<html>
+	<body>
+		<script>
+			var choice=parseInt(prompt("Enter your choice"));
+			switch(choice)
+			{
+				case 1:
+					add();
+				break;
+				case 2:
+					sub();
+				break;
+				default:
+					document.write("Invalid Choice");
+			}
+			function add()
+			{
+				var num1,num2,res=0;
+				num1=10;
+				num2=20;
+				res=num1+num2;
+				document.write("Addition of "+num1+" and "+num2+" is "+res);
+			}
+			
+			function sub()
+			{
+				var num1,num2,res=0;
+				num1=10;
+				num2=20;
+				res=num1-num2;
+				document.write("Subtraction of "+num1+" and "+num2+" is "+res);
+			}
+		</script>
+	</body>
+</html>

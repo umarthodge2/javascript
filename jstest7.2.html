@@ -1,0 +1,33 @@
+<html>
+	<head></head>
+	<body>
+		<script type="text/Javascript">
+
+				var unit_price,quantity,income,discount,net_income
+				unit_price=parseInt(prompt("Enter Unit Price : "))
+				quantity=parseInt(prompt("Enter Quantity : "))
+				income=unit_price*quantity
+				if(quantity>=100 && quantity<=120)
+				{
+					discount=income*0.10
+				}
+				else if(quantity>120)
+				{
+					discount=income*0.15
+				}
+				else if(quantity<100)
+				{
+					discount=0
+				}
+				net_income=income-discount
+			
+				document.write("Unit Price = "+unit_price+"<br/>")
+				document.write("Quantity = "+quantity+"<br/>")
+				document.write("Income = "+income+"<br/>")
+				document.write("Discount = "+discount+"<br/>")
+				document.write("Net Income = "+net_income+"<br/>")
+				
+		</script>
+	</body>
+</html>
+

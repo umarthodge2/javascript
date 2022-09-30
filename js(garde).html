@@ -1,0 +1,39 @@
+<html>
+	<head></head>
+	<body>
+		<script type="text/Javascript">
+			var m1,m2,m3,Total,Per,Grade;
+			m1=parseInt(prompt("Enter a marks"))
+			m2=parseInt(prompt("Enter a marks"))
+			m3=parseInt(prompt("Enter a marks"))
+			Total=m1+m2+m3
+			Per=(Total/3)
+			
+			if(Per<=100 && Per>=75)
+			{
+				Grade="A+"
+			}
+			else if(Per<=74 && Per>=60)
+			{
+				Grade="A"
+			}
+			else if(Per<=59 && Per>=50)
+			{
+				Grade="B"
+			}
+			else if(Per<=49 && Per>=40)
+			{
+				Grade="C"
+			}
+			else
+			{
+				Grade="FAIL"
+			}
+			
+			alert("Total="+Total)
+			alert("Per="+Per)
+			alert("Grade="+Grade)
+		
+		</script>
+	</body>
+</html>

@@ -1,0 +1,129 @@
+<html>
+
+<head>
+	<title>
+		Bank Application
+	</title>
+	<script>
+		function fetch() {
+			var choice = parseInt(document.getElementById("choice").value)
+			switch (choice) {
+				case 1:
+					createAccount();
+					break;
+
+				case 2:
+					deposit();
+					break;
+
+				case 3:
+					withdraw();
+					break;
+
+				case 4:
+					showBalance();
+					break;
+
+				default:
+					document.write("Invalid Choice");
+			}
+		}
+		var init_deposit = 0
+		var accountNo
+		function createAccount() {
+			var name, pan, random1, temp, acc_no;
+			name = prompt("Enter your Full Name: ")
+			init_deposit = parseInt(prompt("Enter your initial deposit: "))
+			pan = parseInt(prompt("Enter your PAN number: "))
+			document.getElementById("result").innerHTML += "Your name :" + name + "<br/>"
+			document.getElementById("result").innerHTML += "Your Deposit :" + init_deposit + "<br/>"
+			document.getElementById("result").innerHTML += "Your pan card nos :" + pan + "<br/>"
+			accountNo = Math.floor(Math.random() * 1000000000)
+			acc_no = document.getElementById("result").innerHTML += "Your new account number is :" + accountNo + "<br/>"
+			pinNumber = Math.round(Math.random() * 10000)
+			pin = document.getElementById("result").innerHTML += "Your new pin number is :" + pinNumber + "<br/>"
+			document.getElementById("result").innerHTML += "Thank you for creating an Account " + name + "<br/>"
+		}
+
+		function deposit() {
+			var acc_no, pin, deposit
+			acc_no = parseInt(prompt("Enter your Account Number: "))
+
+			if (accountNo == acc_no) {
+				alert("Success")
+				pin = parseInt(prompt("Enter Pin: "));
+				deposit = parseInt(prompt("Enter Deposit Amount: "))
+				init_deposit = init_deposit + deposit
+				document.getElementById("result").innerHTML += "Your amount has been Deposited. <br/>Current Balance is : " + init_deposit + "<br/>Thank You!<br/>"
+
+			}
+			else {
+				alert("Incorrect accountName Plz Enter Valid account nos")
+
+			}
+
+		}
+
+		function withdraw() {
+			var acc_no, pin, amount, accountNo;
+
+			var acc_no = parseInt(prompt("Enter your Account Number:"))
+			accountNo=acc_no;	
+			
+
+				if (accountNo == acc_no) {
+					
+					alert("Success")
+
+				}
+				else(accountNo!=acc_no)
+				 {
+					alert("incorrect nos or create new account")
+					var create = createAccount();
+				}
+			pin = parseInt(prompt("Enter Pin: "))
+			amount = parseInt(prompt("Enter the withdrawal amount: "))
+			init_deposit = init_deposit - amount
+			document.getElementById("result").innerHTML += "Your amount has been Debited. <br/>Current Balance is : " + init_deposit + "<br/>Thank You!<br/>"
+		}
+
+		function showBalance() {
+			var acc_no, pin
+			acc_no = parseInt(prompt("Enter your Account Number: "))
+			if (accountNo == acc_no) {
+				alert("Success")
+
+			}
+			else {
+				alert("Incorrect accountName Plz Enter Valid account nos")
+
+			}
+			pin = parseInt(prompt("Enter Pin: "))
+			document.getElementById("result").innerHTML += "Your Account Balance is: " + init_deposit + "<br/>"
+		}
+	</script>
+</head>
+
+<body bgcolor="blue" text="white">
+	<img src="bankimg.png" alt="bankimg">
+	<i><h1>Bank of VTI</h1>
+	<font size="6">
+		<ol>
+			<li>Create Account</li>
+			<li>Deposit Amount</li>
+			<li>Withdraw Amount</li>
+			<li>Show Balance</li>
+		</ol>
+	
+	
+	<form>
+		<label>Enter your choice: </label>
+		<input type="text" id="choice"><br>
+
+		<input type="button" value="Fetch" onclick="fetch()">
+		<p id="result"></p>
+	</form></i>
+</font>
+</body>
+
+</html>

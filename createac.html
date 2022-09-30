@@ -1,0 +1,89 @@
+<html>
+<head>
+	<title>
+	</title>
+	
+	<script> 
+
+		function(acc)
+		{
+			switch (choice)
+					{
+						case 1:
+							create();
+						break;
+						
+						case 2:
+							deposit();
+						break;
+						
+						case 3:
+							withdraw();
+						break;
+						
+						case 4:
+							showbalance();
+						break;
+						default:
+							document.write("Invalid Choice");
+					}
+		}
+					
+					function create()
+					{
+						var name,number.pancard,
+						name=parseInt(prompt("Enter a name:"));
+						number=parseInt(prompt("Enter a number"));
+						pancard=parseInt(prompt("Enter a pan card nos"));
+						res=name;
+						document.getElementById("x").innerHTML="Create acc of"+name+"is"+res.value;
+						
+					}
+					function deposit()
+					{
+					
+					
+					}
+					function withdraw()
+					{
+					
+					
+					}
+			</script>
+			<body>
+			
+			
+			
+		<form>
+		
+		
+		
+		
+		
+		
+		</form>
+		<ol>
+		<li>Create</li>
+		<li>Deposit</li>
+		<li>Withdraw</li>
+		<li>Show Balance</li>
+		
+		</ol>
+		<label>Enter Your Choice:</label>
+		<input type="text" id="choice"><br><br>
+		
+		<input type="Button" value="acc" onclick="acc()"><br>
+		
+		
+		<label>Deposit</label>
+		<input type="text" id="userdeposit" required>
+		<button id="btndeposit">Deposit</button><br><br>
+		
+		<label>Withdraw</label>
+		<input type="text" id="userwithdraw" required>
+		<button id="btnwithdraw">Withdraw</button><br>
+		
+		<p id="x"></p>
+		
+		</form>
+		

@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<style>
+			#res
+			{
+				color:red;
+				font-size:16px;
+				font-weight:bold;
+			}
+		</style>
+	</head>
+	<body>
+		<p id="res"></p>
+		<script type="text/javascript">
+			var p,n,r,si=0;
+			p=parseInt(prompt("Enter Principal Amount"));
+			n=parseInt(prompt("Enter Number of Years"));
+			r=parseInt(prompt("Enter Rate of Interest"));
+			si=(p*n*r)/100;
+			document.getElementById("res").innerHTML="Simple Interest = "+si;
+		</script>
+	</body>
+</html>

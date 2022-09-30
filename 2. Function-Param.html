@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<script type="text/javascript">
+			function add(n1,n2)
+			{
+				num1=parseInt(n1);
+				num2=parseInt(n2);
+				res=num1+num2;
+				document.getElementById("res").innerHTML="Addition = "+res;
+			}
+			function getData()
+			{
+				var num1,num2;
+				num1=document.frm_add.txt_num1.value;
+				num2=document.frm_add.txt_num2.value;
+				add(num1,num2);
+			}
+		</script>
+	</head>
+	<body>
+		<form name="frm_add">
+			Enter 1st Number : <input type="text" name="txt_num1"><br>
+			Enter 2nd Number : <input type="text" name="txt_num2"><br>
+			<input type="button" value="Add" onclick="getData()">
+			<p id="res"></p>
+		</form>
+	</body>
+</html>

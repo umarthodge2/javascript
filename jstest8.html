@@ -1,0 +1,43 @@
+
+
+
+<html>
+	<head></head>
+	<body>
+		<script type="text/Javascript">
+			var basic,gross,HRA,DA
+			basic=parseInt(prompt("Enter a salary"))
+			
+			
+			
+			if(basic<=10000)
+			{
+				HRA=basic*0.8
+				DA=basic*0.2
+			}
+			else if(basic<=20000)
+			{
+				HRA=basic*0.9
+				DA=basic*0.25
+			}
+			else if(basic>20000)
+			{
+				HRA=basic*0.95
+				DA=basic*0.3
+			}
+			gross = basic + HRA + DA;
+			
+			
+			alert("basic is"+ basic)
+			alert("gross is"+ gross)
+			alert("HRA is"+ HRA)
+			alert("DA is"+    DA)
+			
+			
+			
+			
+		
+		</script>
+	</body>
+</html>
+

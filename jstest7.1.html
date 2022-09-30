@@ -1,0 +1,45 @@
+
+
+
+<html>
+	<head></head>
+	<body>
+		<script type="text/Javascript">
+			var price,quantity,total,discount,net
+			
+			price=parseInt(prompt("Enter a Price"))
+			quantity=parseInt(prompt("Enter a quantity"))
+			total=price*quantity
+			
+			
+			
+			
+			if(quantity>=100 && quantity<=120)
+			{
+				discount=total*0.10
+			}
+			else if(quantity>120)
+			{
+				discount=total*0.15
+			}
+			else if(quantity<100)
+			{
+				discount=total*0
+			}
+			net=total-discount
+			
+			alert("price="+price)
+			alert("quantity="+quantity)
+			alert("total="+total)
+			alert("discount="+discount)
+			alert("net="+net)
+			
+			
+			
+			
+		
+		</script>
+	</body>
+</html>
+
+

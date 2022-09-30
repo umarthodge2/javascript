@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title>To find the string-length of a given string
+	</title>
+	
+	<script> 
+	founction count(){
+	var str=["u","m","a","r","t","h","o","d","g","e","a","m","r"]
+	var count={};
+	var current=null;
+	var count=0;
+	for(var i=0; i<str.length; i++){
+		if(str[i]!=current){
+		if(count>0){
+			document.write(current +" comes"+ count+" times");
+		}
+		current=str[i];
+		count=1;
+		} else{
+			count++;
+		}
+	}
+	if (count>0){
+		document.write(current+" comes" +count);
+	}
+	}
+	count();
+	</script>
+			<body>
+	

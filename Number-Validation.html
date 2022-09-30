@@ -1,0 +1,38 @@
+<html> 
+	<body>
+		<p>Please input a number between 1 and 10:</p>
+		<input type="text" id="number">
+		<button type="button" onclick="validate()">Submit</button>
+		<p id="demo"></p>
+		<script>
+			function myFunction() 
+			{
+				var x, text;
+				x = document.getElementById("number").value;
+				
+				// If x is Not a Number or less than one or greater than 10
+				if (isNaN(x) || x < 1 || x > 10) 
+				{
+					text = "Input not valid";
+				} 
+				else 
+				{
+					text = "Input OK";
+				}
+				document.getElementById("demo").innerHTML = text;
+			}
+			function validate()
+			{  
+				var num=document.getElementById("number").value;
+				if (isNaN(num) || num.length>10)
+				{  
+			  		document.getElementById("demo").innerHTML="Enter Numeric value only";  
+				}
+				else
+				{  
+				  	document.getElementById("demo").innerHTML="Input Ok"; 
+				}  
+			}  
+		</script>
+	</body>
+</html>
